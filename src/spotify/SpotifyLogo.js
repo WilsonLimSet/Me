@@ -1,5 +1,4 @@
 import React from 'react';
-//nothing today or today still trying
 const SpotifyLogo = () => (
     <svg width="20px" x="0px" y="0px" viewBox="0 0 20 20" style={{ enableBackground: "new 0 0 20 20" }}>
         <g>
