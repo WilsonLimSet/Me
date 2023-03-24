@@ -87,7 +87,11 @@ const SpotifyNowPlaying = (props) => {
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
           }}> content</a> that makes me content.</li>
-        <li><span style={{ fontWeight: 'bold' }}>Developing.</span> Building <a href="https://stickergoals.xyz/"
+        <li><span style={{ fontWeight: 'bold' }}>Developing.</span> Staying in <a href="https://chrome.google.com/webstore/detail/atomic-flow/gbeiphffnlkmgoclacceflphonplpigi"
+          target="_blank" style={{
+            color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
+            fontWeight: 'bold'
+          }}> Flow</a>. and Building <a href="https://stickergoals.xyz/"
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
