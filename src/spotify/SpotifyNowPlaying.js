@@ -91,7 +91,7 @@ const SpotifyNowPlaying = (props) => {
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
-          }}> Flow</a>. and Building <a href="https://stickergoals.xyz/"
+          }}> Flow</a> and Building <a href="https://stickergoals.xyz/"
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
