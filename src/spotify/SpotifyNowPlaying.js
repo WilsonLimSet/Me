@@ -32,7 +32,6 @@ const SpotifyNowPlaying = (props) => {
   }, [sleepData.total_sleep_duration]);
 
   useEffect(async () => {
-    //console.log(`Sleepdatatext: ${sleepDataText}`)
     Promise.all([
       getNowPlayingItem(
         props.client_id,
