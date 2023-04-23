@@ -72,7 +72,7 @@ const SpotifyNowPlaying = (props) => {
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
-          }}>LinkedIn</a>, wilsonlimsetiawan@gmail.com on email, and my <a href="https://drive.google.com/file/d/1knuNp4i0lVCiXnqKfYvzXSKC2j-ZEXgY/view?usp=sharing"
+          }}>LinkedIn</a>, wilsonlimsetiawan@gmail.com on email, and my <a href="https://drive.google.com/file/d/15Ndedqm3-xBsSuEqMCff3DfPx-Oi8tWp/view?usp=sharing"
             target="_blank" style={{
               color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
               fontWeight: 'bold'
