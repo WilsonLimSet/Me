@@ -208,8 +208,7 @@ const SpotifyNowPlaying = (props) => {
               <SpotifyLogo />
               <Text fontWeight="semibold">{result.isPlaying ? 'Now playing' : "Not Currently Playing"}</Text>
               {result.isPlaying && <PlayingAnimation />}
-
-              {result.isPlaying && renderNowPlayingItem()}
+             
             </Stack>
             {result.isPlaying &&
               <Box p={2} borderRadius="lg" borderWidth={1}>
