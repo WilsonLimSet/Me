@@ -55,40 +55,75 @@ const SpotifyNowPlaying = (props) => {
     }
   }, []);
   const renderNowPlayingItem = () => {
-    if (!result.item) return null;
-
-    return (
-      <Box p={2} borderRadius="lg" borderWidth={1}>
-        <Stack direction="row" spacing={4} align="center">
-          <Image
-            alt={`${result.title} album art`}
-            src={result.albumImageUrl}
-            width={12}
-            height={12}
-            borderRadius="sm"
-          />
-          <Stack spacing={0} overflow="hidden">
-            <Link href={result.itemUrl} target="_blank">
+    if (result.type === "track") {
+      return (
+        <Box p={2} borderRadius="lg" borderWidth={1}>
+          <Stack direction="row" spacing={4} align="center">
+            <Image
+              alt={`${result.title} album art`}
+              src={result.albumImageUrl}
+              width={12}
+              height={12}
+              borderRadius="sm"
+            />
+            <Stack spacing={0} overflow="hidden">
+              <Link href={result.songUrl} target="_blank">
+                <Text
+                  fontWeight="semibold"
+                  width="full"
+                  isTruncated
+                  color="alph"
+                >
+                  {result.title}
+                </Text>
+              </Link>
               <Text
-                fontWeight="semibold"
-                width="full"
+                color="gray.500"
                 isTruncated
-                color="alph"
               >
-                {result.title}
+                {result.artist}
               </Text>
-            </Link>
-            <Text
-              color="gray.500"
-              isTruncated
-            >
-              {result.artist}
-            </Text>
-            <Text></Text>
+              <Text></Text>
+            </Stack>
           </Stack>
-        </Stack>
-      </Box>
-    );
+        </Box>
+      );
+    } else if (result.type === "episode") {
+      return (
+        <Box p={2} borderRadius="lg" borderWidth={1}>
+          <Stack direction="row" spacing={4} align="center">
+            <Image
+              alt={`${result.title} podcast art`}
+              src={result.podcastImageUrl}
+              width={12}
+              height={12}
+              borderRadius="sm"
+            />
+            <Stack spacing={0} overflow="hidden">
+              <Link href={result.episodeUrl} target="_blank">
+                <Text
+                  fontWeight="semibold"
+                  width="full"
+                  isTruncated
+                  color="alph"
+                >
+                  {result.title}
+                </Text>
+              </Link>
+              <Text
+                color="gray.500"
+                isTruncated
+              >
+                {result.showName} - {result.publisher}
+              </Text>
+              <Text></Text>
+            </Stack>
+          </Stack>
+        </Box>
+      );
+    } else {
+      return null;
+    }
   };
 
 
@@ -171,7 +206,7 @@ const SpotifyNowPlaying = (props) => {
           <Stack width="full" mb={result.isPlaying ? 2 : 4} spacing={3}>
             <Stack spacing={2} direction="row" align="center">
               <SpotifyLogo />
-              <Text fontWeight="semibold">{result.isPlaying ? 'Now playing' : "Not currently playing anything"}</Text>
+              <Text fontWeight="semibold">{result.isPlaying ? 'Now playing' : "Not Currently Playing"}</Text>
               {result.isPlaying && <PlayingAnimation />}
 
               {result.isPlaying && renderNowPlayingItem()}
