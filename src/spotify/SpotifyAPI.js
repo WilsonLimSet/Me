@@ -48,18 +48,40 @@ export default async function getNowPlayingItem(
     return false;
   }
 
-  const song = await response.json();
-  const albumImageUrl = song.item.album.images[0].url;
-  const artist = song.item.artists.map((_artist) => _artist.name).join(", ");
-  const isPlaying = song.is_playing;
-  const songUrl = song.item.external_urls.spotify;
-  const title = song.item.name;
+  const data = await response.json();
+  const isPlaying = data.is_playing;
 
-  return {
-    albumImageUrl,
-    artist,
-    isPlaying,
-    songUrl,
-    title,
-  };
+  if (data.currently_playing_type === "track") {
+    const albumImageUrl = data.item.album.images[0].url;
+    const artist = data.item.artists.map((_artist) => _artist.name).join(", ");
+    const songUrl = data.item.external_urls.spotify;
+    const title = data.item.name;
+
+    return {
+      type: "track",
+      albumImageUrl,
+      artist,
+      isPlaying,
+      songUrl,
+      title,
+    };
+  } else if (data.currently_playing_type === "episode") {
+    const podcastImageUrl = data.item.images[0].url;
+    const showName = data.item.show.name;
+    const episodeUrl = data.item.external_urls.spotify;
+    const title = data.item.name;
+    const publisher = data.item.show.publisher;
+
+    return {
+      type: "episode",
+      podcastImageUrl,
+      showName,
+      isPlaying,
+      episodeUrl,
+      title,
+      publisher,
+    };
+  } else {
+    return false;
+  }
 }

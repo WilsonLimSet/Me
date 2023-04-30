@@ -54,6 +54,42 @@ const SpotifyNowPlaying = (props) => {
       console.error(error);
     }
   }, []);
+  const renderNowPlayingItem = () => {
+    if (!result.item) return null;
+
+    return (
+      <Box p={2} borderRadius="lg" borderWidth={1}>
+        <Stack direction="row" spacing={4} align="center">
+          <Image
+            alt={`${result.title} album art`}
+            src={result.albumImageUrl}
+            width={12}
+            height={12}
+            borderRadius="sm"
+          />
+          <Stack spacing={0} overflow="hidden">
+            <Link href={result.itemUrl} target="_blank">
+              <Text
+                fontWeight="semibold"
+                width="full"
+                isTruncated
+                color="alph"
+              >
+                {result.title}
+              </Text>
+            </Link>
+            <Text
+              color="gray.500"
+              isTruncated
+            >
+              {result.artist}
+            </Text>
+            <Text></Text>
+          </Stack>
+        </Stack>
+      </Box>
+    );
+  };
 
 
   return (
@@ -135,8 +171,8 @@ const SpotifyNowPlaying = (props) => {
           <Stack width="full" mb={result.isPlaying ? 2 : 4} spacing={3}>
             <Stack spacing={2} direction="row" align="center">
               <SpotifyLogo />
-              <Text fontWeight="semibold">{result.isPlaying ? 'Now playing' : "Currently offline"}</Text>
-              {result.isPlaying && <PlayingAnimation />}
+              <Text fontWeight="semibold">{result.isPlaying ? 'Now playing' : "Not currently playing anything"}</Text>
+              {result.isPlaying && renderNowPlayingItem()}
             </Stack>
             {result.isPlaying &&
               <Box p={2} borderRadius="lg" borderWidth={1}>
