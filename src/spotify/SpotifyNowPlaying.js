@@ -213,11 +213,10 @@ const SpotifyNowPlaying = (props) => {
               <SpotifyLogo />
               <Text fontWeight="semibold">
                 {result.isPlaying ? 'Now playing' : "Not Currently Playing"}
-                
               </Text>
-              {result.isPlaying && <PlayingAnimation/> && renderNowPlayingItem()}
+              {result.isPlaying && <PlayingAnimation />}
             </Stack>
-          
+            { renderNowPlayingItem()}
             <Stack spacing={2} direction="row" align="center">
               <OuraRingLogo />
               <Text fontWeight="semibold">
