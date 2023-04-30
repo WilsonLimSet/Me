@@ -67,7 +67,7 @@ export default async function getNowPlayingItem(
       title,
     };
   } else if (data.currently_playing_type === "episode") {
-    const podcastImageUrl = data.item.images[0]?.url || '';
+    const podcastImageUrl = "https://www.google.com/";
     const showName = data.item.show.name || '';
     const episodeUrl = data.item.external_urls.spotify || '';
     const title = data.item.name || '';
