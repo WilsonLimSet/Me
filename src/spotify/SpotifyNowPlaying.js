@@ -93,32 +93,34 @@ const SpotifyNowPlaying = (props) => {
         </Box>
       );
     } else if (result.type === "episode") {
+      const showImage = result.item.show.images[0]?.url;
+      const showTitle = result.item.show.name;
       return (
         <Box p={2} borderRadius="lg" borderWidth={1}>
           <Stack direction="row" spacing={4} align="center">
             <Image
-              alt={`${result.title} podcast art`}
-              src={result.podcastImageUrl}
+              alt={`${showTitle} podcast art`}
+              src={showImage}
               width={12}
               height={12}
               borderRadius="sm"
             />
             <Stack spacing={0} overflow="hidden">
-              <Link href={result.episodeUrl} target="_blank">
+              <Link href={result.item.external_urls.spotify} target="_blank">
                 <Text
                   fontWeight="semibold"
                   width="full"
                   isTruncated
                   color="alph"
                 >
-                  {result.title}
+                  {result.item.name}
                 </Text>
               </Link>
               <Text
                 color="gray.500"
                 isTruncated
               >
-                {result.showName} - {result.publisher}
+                {showTitle}
               </Text>
               <Text></Text>
             </Stack>
