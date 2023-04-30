@@ -215,7 +215,7 @@ const SpotifyNowPlaying = (props) => {
                 {result.isPlaying ? 'Now playing' : "Not Currently Playing"}
               </Text>
             </Stack>
-            {result.isPlaying &&  PlayingAnimation && renderNowPlayingItem()}
+            {result.isPlaying && <PlayingAnimation/> && renderNowPlayingItem()}
             <Stack spacing={2} direction="row" align="center">
               <OuraRingLogo />
               <Text fontWeight="semibold">
