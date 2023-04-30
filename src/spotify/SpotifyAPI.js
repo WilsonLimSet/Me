@@ -56,6 +56,7 @@ export default async function getNowPlayingItem(
     const artist = data.item.artists.map((_artist) => _artist.name).join(", ");
     const songUrl = data.item.external_urls.spotify;
     const title = data.item.name;
+    console.log(data); // logs the entire data object to the console
 
     return {
       type: "track",
@@ -71,15 +72,9 @@ export default async function getNowPlayingItem(
     const episodeUrl = data.item?.external_urls?.spotify || '';
     const title = data.item?.name || '';
     const publisher = data.item?.show?.publisher || '';
+
     console.log(data); // logs the entire data object to the console
 
-console.log(data.item.name); // logs just the episode name to the console
-
-console.log(data.item.show.name); // logs just the podcast name to the console
-
-console.log(data.item.show.images[0].url); // logs just the image URL to the console
-
-console.log(data.item.external_urls.spotify); // logs just the episode URL to the console
 
 
     return {
