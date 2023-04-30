@@ -74,9 +74,6 @@ export default async function getNowPlayingItem(
     const publisher = data.item?.show?.publisher || '';
 
     console.log(data); // logs the entire data object to the console
-
-
-
     return {
       type: "episode",
       podcastImageUrl,

@@ -93,8 +93,8 @@ const SpotifyNowPlaying = (props) => {
         </Box>
       );
     } else if (result.type === "episode") {
-      const showImage = result.item.show.images[0]?.url;
-      const showTitle = result.item.show.name;
+      const showImage = result.podcastImageUrl;
+      const showTitle = result.showName;
       return (
         <Box p={2} borderRadius="lg" borderWidth={1}>
           <Stack direction="row" spacing={4} align="center">
@@ -106,7 +106,7 @@ const SpotifyNowPlaying = (props) => {
               borderRadius="sm"
             />
             <Stack spacing={0} overflow="hidden">
-              <Link href={result.item.external_urls.spotify} target="_blank">
+              <Link href={result.episodeUrl} target="_blank">
                 <Text
                   fontWeight="semibold"
                   width="full"
