@@ -42,6 +42,10 @@ const SpotifyNowPlaying = (props) => {
     ]).then((results) => {
       setResult(results[0]);
       setLoading(false);
+    })
+    .catch((error) => {
+      console.error("Error fetching now playing item:", error);
+      setLoading(false);
     });
 
     try {
@@ -211,7 +215,7 @@ const SpotifyNowPlaying = (props) => {
                 {result.isPlaying ? 'Now playing' : "Not Currently Playing"}
               </Text>
             </Stack>
-            {result.isPlaying && renderNowPlayingItem()}
+            {result.isPlaying &&  PlayingAnimation && renderNowPlayingItem()}
             <Stack spacing={2} direction="row" align="center">
               <OuraRingLogo />
               <Text fontWeight="semibold">
