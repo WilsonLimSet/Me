@@ -66,11 +66,12 @@ export default async function getNowPlayingItem(
       title,
     };
   } else if (data.currently_playing_type === "episode") {
-    const podcastImageUrl = data.item.images[0].url;
-    const showName = data.item.show.name;
-    const episodeUrl = data.item.external_urls.spotify;
-    const title = data.item.name;
-    const publisher = data.item.show.publisher;
+    const podcastImageUrl = data.item?.images?.[0]?.url || '';
+    const showName = data.item?.show?.name || '';
+    const episodeUrl = data.item?.external_urls?.spotify || '';
+    const title = data.item?.name || '';
+    const publisher = data.item?.show?.publisher || '';
+
 
     return {
       type: "episode",
