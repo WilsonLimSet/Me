@@ -149,7 +149,7 @@ const SpotifyNowPlaying = (props) => {
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
-          }}>LinkedIn</a>, wilsonlimsetiawan@gmail.com on email, and my <a href="https://drive.google.com/file/d/12RyzE1GA0JzeGEl-802PMaE6c87X6DWd/view?usp=sharing"
+          }}>LinkedIn</a>, wilsonlimsetiawan@gmail.com on email, and my <a href="https://drive.google.com/file/d/1vNG7Ba7vHq4jhrbVRgy3I1IyPWIIlfqW/view?usp=sharing"
             target="_blank" style={{
               color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
               fontWeight: 'bold'
@@ -167,11 +167,7 @@ const SpotifyNowPlaying = (props) => {
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
-          }}> Flow</a> and Building <a href="https://stickergoals.xyz/"
-          target="_blank" style={{
-            color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
-            fontWeight: 'bold'
-          }}> Sticker</a>.</li>
+          }}> Flow</a> .</li>
         <li><span style={{ fontWeight: 'bold' }}>Podcasting.</span> Learning from others to get <a href="https://open.spotify.com/show/7jDxgVTztsskpDLGuyORNJ?si=f6eaf639f0894aed"
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
