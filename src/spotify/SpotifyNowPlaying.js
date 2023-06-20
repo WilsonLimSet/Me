@@ -59,7 +59,7 @@ const SpotifyNowPlaying = (props) => {
     }
   }, []);
   const renderNowPlayingItem = () => {
-    if (result.type === "track") {
+    if (result.type === "track" &&result.isPlaying ) {
       return (
         <Box p={2} borderRadius="lg" borderWidth={1}>
           <Stack direction="row" spacing={4} align="center">
