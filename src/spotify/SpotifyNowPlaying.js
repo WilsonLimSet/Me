@@ -193,11 +193,11 @@ const SpotifyNowPlaying = (props) => {
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
           }}>Think Outside</a>.</li>
-        <li><span style={{ fontWeight: 'bold' }}>Books.</span> I am currently reading <a href="https://www.goodreads.com/book/show/52838315-greenlights"
+        <li><span style={{ fontWeight: 'bold' }}>Books.</span> I am currently reading <a href="https://www.goodreads.com/book/show/59364173-i-m-glad-my-mom-died"
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
-          }}>Greenlights</a>.
+          }}>I'm Glad My Mom Died</a>.
           <br />
           These have had the greatest impact on my worldview.</li>
         <BooksGrid />
