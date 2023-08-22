@@ -136,7 +136,7 @@ const SpotifyNowPlaying = (props) => {
   return (
     <Center>
       <Text>Hey, I’m Wilson Lim Setiawan. I grew up in Singapore and am currently a
-        junior studying Computer Science at the <a href="https://www.youtube.com/watch?v=vPCLIFs6KwI"
+        senior studying Computer Science at the <a href="https://www.youtube.com/watch?v=vPCLIFs6KwI"
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
