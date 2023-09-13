@@ -8,6 +8,7 @@ import BooksGrid from "../GoodReads";
 import axios from 'axios';
 import OuraRingLogo from "../OuraRingLogo";
 import '../styles.css';
+import AviationData from "../Flying";
 
 
 function secondsToHoursMinutes(seconds) {
@@ -187,6 +188,12 @@ const SpotifyNowPlaying = (props) => {
               color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
               fontWeight: 'bold'
             }}>Indonesian</a> roots.</li>
+             <li><span style={{ fontWeight: 'bold' }}>Flying.</span> <a href="https://www.peaksandprofessors.org/"
+          target="_blank" style={{
+            color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
+            fontWeight: 'bold'
+          }}>Working towards a PPL.</a>.</li>
+          <AviationData/>
 
         <li><span style={{ fontWeight: 'bold' }}>Hiking.</span> <a href="https://www.peaksandprofessors.org/"
           target="_blank" style={{
