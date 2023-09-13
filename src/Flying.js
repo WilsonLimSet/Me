@@ -8,7 +8,7 @@ const AviationData = () => {
       </a>
       <iframe
         title="METAR Santa Monica"
-        src="https://metar-taf.com/KSMO"
+        src="https://metar-taf.com/embed-js/KSMO?layout=landscape&visibility=mi&qnh=inHg&rh=rh&target=p2H3ehTx"
         width="100%"
         height="100%"
         frameBorder="0"
