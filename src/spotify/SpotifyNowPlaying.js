@@ -179,7 +179,9 @@ const SpotifyNowPlaying = (props) => {
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
           }}> 1% better</a>.</li>
-          
+             <li><span style={{ fontWeight: 'bold' }}>Flying.</span> Working towards a PPL.
+          </li>
+          <AviationData/>
             
         <li><span style={{ fontWeight: 'bold' }}>Books.</span> I am currently reading <a href="https://www.goodreads.com/book/show/5297.The_Picture_of_Dorian_Gray"
           target="_blank" style={{
@@ -189,9 +191,6 @@ const SpotifyNowPlaying = (props) => {
           <br />
           These have had the greatest impact on my worldview.</li>
         <BooksGrid />
-        <li><span style={{ fontWeight: 'bold' }}>Flying.</span> Working towards a PPL.
-          </li>
-          <AviationData/>
       </ul>
 
       <br />
