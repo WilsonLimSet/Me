@@ -192,10 +192,13 @@ const SpotifyNowPlaying = (props) => {
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
-          }}>Working towards a PPL.</a>.</li>
+          }}>Working towards a PPL.</a>.
+          </li>
           <AviationData/>
+         
 
-        <li><span style={{ fontWeight: 'bold' }}>Hiking.</span> <a href="https://www.peaksandprofessors.org/"
+        <li>
+        <span style={{ fontWeight: 'bold' }}>Hiking.</span> <a href="https://www.peaksandprofessors.org/"
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
