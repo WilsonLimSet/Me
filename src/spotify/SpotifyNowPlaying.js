@@ -191,14 +191,7 @@ const SpotifyNowPlaying = (props) => {
              <li><span style={{ fontWeight: 'bold' }}>Flying.</span> Working towards a PPL.
           </li>
           <AviationData/>
-         
-
-        <li>
-        <span style={{ fontWeight: 'bold' }}>Hiking.</span> <a href="https://www.peaksandprofessors.org/"
-          target="_blank" style={{
-            color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
-            fontWeight: 'bold'
-          }}>Think Outside</a>.</li>
+            
         <li><span style={{ fontWeight: 'bold' }}>Books.</span> I am currently reading <a href="https://www.goodreads.com/book/show/5297.The_Picture_of_Dorian_Gray"
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
