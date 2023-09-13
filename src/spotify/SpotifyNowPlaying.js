@@ -179,15 +179,6 @@ const SpotifyNowPlaying = (props) => {
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
           }}> 1% better</a>.</li>
-        <li><span style={{ fontWeight: 'bold' }}>Culture.</span> Maintaining my <a href="https://usc-ssa.github.io/Singapore-Student-Association/"
-          target="_blank" style={{
-            color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
-            fontWeight: 'bold'
-          }}>Singaporean</a> and <a href="https://www.instagram.com/uscasis/?hl=en"
-            target="_blank" style={{
-              color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
-              fontWeight: 'bold'
-            }}>Indonesian</a> roots.</li>
              <li><span style={{ fontWeight: 'bold' }}>Flying.</span> Working towards a PPL.
           </li>
           <AviationData/>
