@@ -10,7 +10,7 @@ const AviationData = () => {
         async
         defer
         crossorigin="anonymous"
-        src="https://metar-taf.com/embed-js/KSMO?layout=landscape&visibility=mi&rh=rh&target=L4CZwZLO"
+        src="https://metar-taf.com/embed-js/KSMO?bg_color=&layout=landscape&visibility=mi&qnh=inHg&rh=rh&target=ZyAXiWtm"
       ></script>
     </div>
   );
