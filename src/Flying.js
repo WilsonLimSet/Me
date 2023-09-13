@@ -24,7 +24,7 @@ const AviationData = () => {
   return (
     <a href="https://metar-taf.com/KSMO" 
        id="metartaf-4QVn8PNw" 
-       style={{ fontSize: '12px', fontWeight: '250', color: '#000', width: '350px', height: '240px', display: 'block' }}>
+       style={{ fontSize: '12px', fontWeight: '250', color: '#000', width: '350px', height: '255px', display: 'block' }}>
       METAR Santa Monica Municipal Airport
     </a>
   );
