@@ -2,7 +2,7 @@ import React from 'react';
 
 const AviationData = () => {
   return (
-    <div style={{ backgroundColor: 'black', fontSize: '18px', fontWeight: 500, color: 'white', width: '400px', height: '278px' }}>
+    <div style={{ backgroundColor: 'transparent', fontSize: '18px', fontWeight: 500, color: 'white', width: '400px', height: '278px' }}>
       <a href="https://metar-taf.com/KSMO" id="metartaf-L4CZwZLO" style={{ display: 'block' }}>
         METAR Santa Monica Municipal Airport
       </a>
