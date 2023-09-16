@@ -9,6 +9,8 @@ import axios from 'axios';
 import OuraRingLogo from "../OuraRingLogo";
 import '../styles.css';
 import AviationData from "../Flying";
+import { Analytics } from '@vercel/analytics/react';
+
 
 
 function secondsToHoursMinutes(seconds) {
@@ -229,7 +231,7 @@ const SpotifyNowPlaying = (props) => {
 
 
        
-
+            <Analytics />
 export default SpotifyNowPlaying;
 
 const Center = styled.div`
