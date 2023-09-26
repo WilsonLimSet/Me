@@ -183,8 +183,7 @@ const SpotifyNowPlaying = (props) => {
           }}> 1% better</a>.</li>
              <li><span style={{ fontWeight: 'bold' }}>Flying.</span> Working towards a PPL.
           </li>
-          <AviationData/>
-            
+           
         <li><span style={{ fontWeight: 'bold' }}>Books.</span> I am currently reading <a href="https://www.goodreads.com/book/show/62873378-the-art-thief"
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
