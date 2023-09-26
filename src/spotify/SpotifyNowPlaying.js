@@ -185,11 +185,11 @@ const SpotifyNowPlaying = (props) => {
           </li>
           <AviationData/>
             
-        <li><span style={{ fontWeight: 'bold' }}>Books.</span> I am currently reading <a href="https://www.goodreads.com/book/show/1617.Night?from_search=true&from_srp=true&qid=FQXtnSpnqM&rank=2"
+        <li><span style={{ fontWeight: 'bold' }}>Books.</span> I am currently reading <a href="https://www.goodreads.com/book/show/62873378-the-art-thief"
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
-          }}>Night</a>.
+          }}>The Art Thief</a>.
           <br />
           These have had the greatest impact on my worldview.</li>
         <BooksGrid />
