@@ -9,7 +9,7 @@ import axios from 'axios';
 import OuraRingLogo from "../OuraRingLogo";
 import '../styles.css';
 import AviationData from "../Flying";
-import { Analytics } from '@vercel/analytics/react';
+
 
 
 
