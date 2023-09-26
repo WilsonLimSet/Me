@@ -228,10 +228,6 @@ const SpotifyNowPlaying = (props) => {
 
             )
             };
-
-
-       
-            <Analytics />
 export default SpotifyNowPlaying;
 
 const Center = styled.div`
