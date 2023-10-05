@@ -181,7 +181,7 @@ const SpotifyNowPlaying = (props) => {
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
           }}> 1% better</a>.</li>
-             <li><span style={{ fontWeight: 'bold' }}>Flying.</span> Working towards a PPL.
+             <li><span style={{ fontWeight: 'bold' }}>Flying.</span> Flew my first Solo on 3rd October 2023, working towards a PPL.
           </li>
            
         <li><span style={{ fontWeight: 'bold' }}>Books.</span> I am currently reading <a href="https://www.goodreads.com/book/show/62873378-the-art-thief"
