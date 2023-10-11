@@ -184,11 +184,11 @@ const SpotifyNowPlaying = (props) => {
              <li><span style={{ fontWeight: 'bold' }}>Flying.</span> Flew my first Solo on 3rd October 2023, working towards a PPL.
           </li>
            
-        <li><span style={{ fontWeight: 'bold' }}>Books.</span> I am currently reading <a href="https://www.goodreads.com/book/show/62873378-the-art-thief"
+        <li><span style={{ fontWeight: 'bold' }}>Books.</span> I am currently reading <a href="https://www.goodreads.com/book/show/162332.The_Sailor_Who_Fell_from_Grace_with_the_Sea"
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
-          }}>The Art Thief</a>.
+          }}>The Sailor Who Fell from Grace with the Sea </a>.
           <br />
           These have had the greatest impact on my worldview.</li>
         <BooksGrid />
