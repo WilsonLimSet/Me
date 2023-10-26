@@ -170,11 +170,11 @@ const SpotifyNowPlaying = (props) => {
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
-          }}> Flow</a> and <a href="https://www.coffeechatai.com/"
+          }}> Flow</a> and <a href="https://www.wakeclub.sg/"
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
-          }}> Coffee Chatting</a>
+          }}> Waking Up</a>
           .</li>
         <li><span style={{ fontWeight: 'bold' }}>Podcasting.</span> Learning from others to get <a href="https://open.spotify.com/show/7jDxgVTztsskpDLGuyORNJ?si=f6eaf639f0894aed"
           target="_blank" style={{
