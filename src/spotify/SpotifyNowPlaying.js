@@ -8,9 +8,7 @@ import BooksGrid from "../GoodReads";
 import axios from 'axios';
 import OuraRingLogo from "../OuraRingLogo";
 import '../styles.css';
-import AviationData from "../Flying";
-
-
+import { Analytics } from '@vercel/analytics/react';
 
 
 function secondsToHoursMinutes(seconds) {
@@ -23,15 +21,12 @@ const SpotifyNowPlaying = (props) => {
   const [loading, setLoading] = useState(true);
   const [result, setResult] = useState({});
   const [sleepData, setSleepData] = useState({});
-  const [sleepDate, setSleepDate] = useState({});
   
   let date = new Date();
   date.setDate(date.getDate()-1 );
 
-  //console.log(`Querying data for ${date.toISOString().slice(0, 10)}`);
-
   const sleepDataText = useMemo(() => {
-    return `Sleep: ${secondsToHoursMinutes(sleepData.total_sleep_duration)}`;
+    return `TotalSleep: ${secondsToHoursMinutes(sleepData.total_sleep_duration)}`;
   }, [sleepData.total_sleep_duration]);
 
   useEffect(async () => {
@@ -158,6 +153,7 @@ const SpotifyNowPlaying = (props) => {
               fontWeight: 'bold'
             }}> resume</a>.</Text>
       <br />
+      <Analytics />
       <Text>Things I'm involved with and areas of interest: </Text>
 
       <ul style={{ paddingLeft: '60px' }}>
@@ -188,7 +184,7 @@ const SpotifyNowPlaying = (props) => {
           target="_blank" style={{
             color: 'blue', fontStyle: 'italic', textDecoration: 'underline',
             fontWeight: 'bold'
-          }}>The Sailor Who Fell from Grace with the Sea </a>.
+          }}>The Sailor Who Fell from Grace with the Sea</a>.
           <br />
           These have had the greatest impact on my worldview.</li>
         <BooksGrid />
@@ -206,7 +202,7 @@ const SpotifyNowPlaying = (props) => {
             <Stack spacing={2} direction="row" align="center">
               <SpotifyLogo />
               <Text fontWeight="semibold">
-                {result.isPlaying ? 'Now Playing' : "Not Currently Playing"}
+                {result.isPlaying ? 'Now Playing' : "Not Currently Playing Anything"}
               </Text>
               {result.isPlaying && <PlayingAnimation />}
             </Stack>
