@@ -73,13 +73,21 @@ async function BlogLink({ slug, name, description }) {
 export default function Page() {
   const [sleepData, setSleepData] = useState<SleepData | null>(null);
 
-  const [darkMode, setDarkMode] = useState(window.matchMedia("(prefers-color-scheme: dark)").matches);
-useEffect(() => {
-  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-  const changeHandler = () => setDarkMode(mediaQuery.matches);
-  mediaQuery.addEventListener("change", changeHandler);
-  return () => mediaQuery.removeEventListener("change", changeHandler);
-}, []);
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Now we are in the client, we can safely check the preference
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setDarkMode(prefersDarkMode);
+
+    // Add event listener to react to changes in the preference
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const changeHandler = () => setDarkMode(mediaQuery.matches);
+    mediaQuery.addEventListener("change", changeHandler);
+
+    // Cleanup function to remove the event listener
+    return () => mediaQuery.removeEventListener("change", changeHandler);
+  }, []);
 
   useEffect(() => {
     async function fetchSleepData() {
