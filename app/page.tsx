@@ -89,7 +89,7 @@ export default function Page() {
   return (
     <section>
       <h1 className="font-semibold text-2xl mb-2 tracking-tighter"> 林伟生</h1>
-      <div className="prose prose-neutral ">
+      <div className="prose prose-neutral dark:prose-invert">
         I’m Wilson Lim Setiawan, born/raised in Singapore, currently a senior
         studying Computer Science at University of Southern California.
         {` My experience includes SWE internships at  `}
