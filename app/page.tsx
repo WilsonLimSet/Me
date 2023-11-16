@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Suspense } from "react";
 import React, { useEffect, useState } from "react";
 
@@ -7,6 +7,7 @@ interface SleepData {
   date: string;
   total_sleep_duration: number;
 }
+
 
 const formatSleepDuration = (totalSeconds) => {
   const hours = Math.floor(totalSeconds / 3600);
@@ -71,6 +72,15 @@ async function BlogLink({ slug, name, description }) {
 
 export default function Page() {
   const [sleepData, setSleepData] = useState<SleepData | null>(null);
+
+  const [darkMode, setDarkMode] = useState(window.matchMedia("(prefers-color-scheme: dark)").matches);
+useEffect(() => {
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const changeHandler = () => setDarkMode(mediaQuery.matches);
+  mediaQuery.addEventListener("change", changeHandler);
+  return () => mediaQuery.removeEventListener("change", changeHandler);
+}, []);
+
   useEffect(() => {
     async function fetchSleepData() {
       try {
@@ -88,9 +98,9 @@ export default function Page() {
   }, []);
   return (
     <section>
-      <h1 className="font-semibold text-2xl mb-2 tracking-tighter"> 林伟生</h1>
+      <h1 className="font-semibold text-2xl mb-2 tracking-tighter">林伟生</h1>
       <div className="prose prose-neutral dark:prose-invert">
-        I’m Wilson Lim Setiawan, born/raised in Singapore, currently a senior
+        I'm Wilson Lim Setiawan, born/raised in Singapore, currently a senior
         studying Computer Science at University of Southern California.
         {` My experience includes SWE internships at  `}
         <span className="not-prose">
@@ -102,14 +112,17 @@ export default function Page() {
               width="57"
             />
           </Badge>
-          {` and  `}
-          <Badge href="https://www.lafayettesquare.com/">
-            <img
-              alt="LS logomark"
-              src="/images/LS.png"
-              className="!mr-1"
-              width="53"
-            />
+        
+          and {` `}
+
+          <Badge href="https://www.wallex.asia/">
+<img
+  alt="LS logomark"
+  src={darkMode ? "/images/LSBRIGHT.png" : "/images/LS.png"}
+  className="!mr-1"
+  width="53"
+/>
+        
           </Badge>
           {`, product at  `}
           <Badge href="https://www.wallex.asia/">
