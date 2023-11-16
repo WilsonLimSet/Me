@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: 'Developer and creator.',
   openGraph: {
     title: 'Wilson Lim Setiawan',
-    description: 'Developer and creator.',
+    description: 'Developer and Creator.',
     url: 'https://wilsonlimsetiawan.com',
     siteName: 'Wilson Lim Setiawan',
     locale: 'en_US',
