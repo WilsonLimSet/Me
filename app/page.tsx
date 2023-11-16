@@ -126,7 +126,7 @@ export default function Page() {
           <Badge href="https://www.wallex.asia/">
 <img
   alt="LS logomark"
-  src={darkMode ? "/images/LSBRIGHT.png" : "/images/LS.png"}
+  src={darkMode ? "/images/LSLOGO.png" : "/images/LS.png"}
   className="!mr-1"
   width="53"
 />
