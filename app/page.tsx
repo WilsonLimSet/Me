@@ -43,7 +43,7 @@ function ArrowIcon() {
   );
 }
 
-async function BlogLink({ slug, name, description }) {
+async function BlogLink({ slug, name, description, stats }) {
   return (
     <a
       href={`${slug}`}
@@ -51,7 +51,7 @@ async function BlogLink({ slug, name, description }) {
       rel="noopener noreferrer"
       className="border no-underline leading-1 
       border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded flex items-center justify-between 
-      px-3 py-0 w-full hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-200"
+      px-3 pb-4 w-full hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-200"
     >
       <div className=" flex-grow">
         {" "}
@@ -62,6 +62,9 @@ async function BlogLink({ slug, name, description }) {
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
           {description}
         </p>
+        <div className="text-sm text-neutral-500 dark:text-neutral-200">
+         {stats}
+      </div>
       </div>
       <div className="ml-4">
         <ArrowIcon />
@@ -161,6 +164,7 @@ export default function Page() {
                 name="WakeClub"
                 slug="https://www.wakeclub.sg/"
                 description="Mobile app putting a dollar value to sleep for SEA."
+                stats = "Currently Building."
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
@@ -169,6 +173,7 @@ export default function Page() {
                 name="Coffee Chat AI"
                 slug="https://www.coffeechatai.com/"
                 description="Podcast and coffee chat question generator."
+                stats = "600+ Coffee Chats Aided."
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
@@ -177,6 +182,7 @@ export default function Page() {
                 name="Atomic Flow"
                 slug="https://chrome.google.com/webstore/detail/atomic-flow/gbeiphffnlkmgoclacceflphonplpigi"
                 description="Chrome extension to block distracting social media websites."
+                stats = "30+ Weekly Users."
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
@@ -185,6 +191,7 @@ export default function Page() {
                 name="Greenwash AI"
                 slug="https://www.greenwashai.com/"
                 description="Regulatory ESG marketing compliance tool."
+                stats = "Hackathon Submission."
               />
             </div>
           </Suspense>
