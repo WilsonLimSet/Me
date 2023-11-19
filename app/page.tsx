@@ -173,7 +173,7 @@ export default function Page() {
                 name="Coffee Chat AI"
                 slug="https://www.coffeechatai.com/"
                 description="Podcast and coffee chat question generator."
-                stats = "600+ Coffee Chats Aided."
+                stats = "1K+ Coffee Chats Aided."
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
@@ -188,10 +188,10 @@ export default function Page() {
             <div className="w-full md:w-1/2 p-3">
               {" "}
               <BlogLink
-                name="Greenwash AI"
-                slug="https://www.greenwashai.com/"
-                description="Regulatory ESG marketing compliance tool."
-                stats = "Hackathon Submission."
+                name="Youtube Title Views Updater"
+                slug="https://www.youtube.com/watch?v=PA2GKru3GT8"
+                description="Cron job to automatically update video title based on views."
+                stats = "200+ Views."
               />
             </div>
           </Suspense>
@@ -215,7 +215,7 @@ export default function Page() {
             , wilsonlimsetiawan@gmail.com and my{" "}
             <a
               target="_blank"
-              href="https://drive.google.com/file/d/16A7qjggfGAd5hjnrSEYjigNm2TWMqlNO/view?usp=sharing"
+              href="https://drive.google.com/file/d/1_wjXqzqCqm2iVegkV7SrrtnMsq3DA21x/view?usp=sharing"
               className="text-gray-500 hover:text-gray-700"
             >
               resume
