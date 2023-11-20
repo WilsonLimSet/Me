@@ -8,7 +8,6 @@ interface SleepData {
   total_sleep_duration: number;
 }
 
-
 const formatSleepDuration = (totalSeconds) => {
   const hours = Math.floor(totalSeconds / 3600);
   const minutes = Math.floor((totalSeconds % 3600) / 60);
@@ -63,8 +62,8 @@ async function BlogLink({ slug, name, description, stats }) {
           {description}
         </p>
         <div className="text-sm text-neutral-500 dark:text-neutral-200">
-         {stats}
-      </div>
+          {stats}
+        </div>
       </div>
       <div className="ml-4">
         <ArrowIcon />
@@ -80,7 +79,9 @@ export default function Page() {
 
   useEffect(() => {
     // Now we are in the client, we can safely check the preference
-    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDarkMode = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
     setDarkMode(prefersDarkMode);
 
     // Add event listener to react to changes in the preference
@@ -123,17 +124,14 @@ export default function Page() {
               width="57"
             />
           </Badge>
-        
           and {` `}
-
-          <Badge href="https://www.wallex.asia/">
-<img
-  alt="LS logomark"
-  src={darkMode ? "/images/LSLOGO.png" : "/images/LS.png"}
-  className="!mr-1"
-  width="53"
-/>
-        
+          <Badge href="https://www.lafayettesquare.com/">
+            <img
+              alt="LS logomark"
+              src={darkMode ? "/images/LSLOGO.png" : "/images/LS.png"}
+              className="!mr-1"
+              width="53"
+            />
           </Badge>
           {`, product at  `}
           <Badge href="https://www.wallex.asia/">
@@ -152,9 +150,9 @@ export default function Page() {
               className="!mr-1"
               width="81"
             />
-          </Badge>{`.`}
-           {` Here are some projects I've built:`}
-        
+          </Badge>
+          {`.`}
+          {` Here are some projects I've built:`}
         </span>
         <div className="my-0 flex flex-wrap justify-between w-full items-start">
           <Suspense>
@@ -164,7 +162,7 @@ export default function Page() {
                 name="WakeClub"
                 slug="https://www.wakeclub.sg/"
                 description="Mobile app putting a dollar value to sleep for SEA."
-                stats = "Currently Building."
+                stats="Currently Building."
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
@@ -173,7 +171,7 @@ export default function Page() {
                 name="Coffee Chat AI"
                 slug="https://www.coffeechatai.com/"
                 description="Podcast and coffee chat question generator."
-                stats = "1K+ Coffee Chats Aided."
+                stats="1K+ Coffee Chats Aided."
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
@@ -182,7 +180,7 @@ export default function Page() {
                 name="Atomic Flow"
                 slug="https://chrome.google.com/webstore/detail/atomic-flow/gbeiphffnlkmgoclacceflphonplpigi"
                 description="Chrome extension to block distracting social media websites."
-                stats = "30+ Weekly Users."
+                stats="30+ Weekly Users."
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
@@ -191,7 +189,7 @@ export default function Page() {
                 name="Youtube Title Views Updater"
                 slug="https://www.youtube.com/watch?v=PA2GKru3GT8"
                 description="Cron job to automatically update video title based on views."
-                stats = "200+ Views."
+                stats="400+ Views."
               />
             </div>
           </Suspense>
