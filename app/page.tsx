@@ -180,7 +180,7 @@ export default function Page() {
                 name="Atomic Flow"
                 slug="https://chrome.google.com/webstore/detail/atomic-flow/gbeiphffnlkmgoclacceflphonplpigi"
                 description="Chrome extension to block distracting social media websites."
-                stats="30+ Weekly Users."
+                stats="40+ Weekly Users."
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
@@ -189,7 +189,7 @@ export default function Page() {
                 name="Youtube Title Views Updater"
                 slug="https://www.youtube.com/watch?v=PA2GKru3GT8"
                 description="Cron job to automatically update video title based on views."
-                stats="400+ Views."
+                stats="600+ Views."
               />
             </div>
           </Suspense>
@@ -258,7 +258,7 @@ export default function Page() {
             Pilot License.
           </li>
           <li>
-            Currently reading The Sailor Who Fell from Grace with the Sea,{" "}
+            Currently reading Elon Musk,{" "}
             <a
               href="https://www.goodreads.com/review/list/93017514-wilson?shelf=most-impactful&view=covers"
               target="_blank"
