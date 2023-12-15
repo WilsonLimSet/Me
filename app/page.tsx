@@ -159,9 +159,9 @@ export default function Page() {
             <div className="w-full md:w-1/2 p-3">
               {" "}
               <BlogLink
-                name="WakeClub"
-                slug="https://www.wakeclub.sg/"
-                description="Mobile app putting a dollar value to sleep for SEA."
+                name="Sleep Ranking"
+                slug="https://www.sleepranking.com/"
+                description="Competitive social accountability with sleep."
                 stats="Currently Building."
               />
             </div>
@@ -213,7 +213,7 @@ export default function Page() {
             , wilsonlimsetiawan@gmail.com and my{" "}
             <a
               target="_blank"
-              href="https://drive.google.com/file/d/1_wjXqzqCqm2iVegkV7SrrtnMsq3DA21x/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Hp2b_oOYwa674r18THchnOGRMZOheAxa/view?usp=sharing"
               className="text-gray-500 hover:text-gray-700"
             >
               resume
