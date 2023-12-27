@@ -223,6 +223,17 @@ export default function Page() {
         </div>
         <h3 id="involved">Things I'm involved with and areas of interest:</h3>
         <ul>
+        <li>
+            Completing my {" "}
+            <a
+              href="/25by25"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              25 by 25 in 25
+            </a>
+            .
+          </li>
           <li>
             Creating{" "}
             <a
@@ -253,12 +264,9 @@ export default function Page() {
             )}{" "}
             last night.
           </li>
+       
           <li>
-            Flew my first Solo on 3rd October 2023, working towards a Private
-            Pilot License.
-          </li>
-          <li>
-            Currently reading Elon Musk,{" "}
+            Currently reading Foundation,{" "}
             <a
               href="https://www.goodreads.com/review/list/93017514-wilson?shelf=most-impactful&view=covers"
               target="_blank"

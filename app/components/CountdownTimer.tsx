@@ -41,7 +41,7 @@ const CountdownTimer = () => {
 
     return (
         <div className="flex items-center">
-            <h3 className="font-bold mr-2">Countdown to 25 -</h3>
+            <h3 className="font-bold mr-2">Countdown to 25:</h3>
             <div>
                 {timeLeft.months || 0} Months, {timeLeft.days || 0} Days, {timeLeft.hours || 0} Hours, {timeLeft.minutes || 0} Minutes, {timeLeft.seconds || 0} Seconds
             </div>
