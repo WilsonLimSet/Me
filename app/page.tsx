@@ -223,13 +223,9 @@ export default function Page() {
         </div>
         <h3 id="involved">Things I'm involved with and areas of interest:</h3>
         <ul>
-        <li>
-            Completing my {" "}
-            <a
-              href="/25by25"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <li>
+            Completing my{" "}
+            <a href="/25by25" target="_blank" rel="noopener noreferrer">
               25 by 25 in 25
             </a>
             .
@@ -264,7 +260,7 @@ export default function Page() {
             )}{" "}
             last night.
           </li>
-       
+
           <li>
             Currently reading Foundation,{" "}
             <a
