@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
-import Sidebar from './components/sidebar';
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
