@@ -9,33 +9,22 @@ export default function by25Page() {
   return (
     <section>
       <Link href="/">
-        <h1 className="font-semibold text-2xl mb-2 tracking-tighter">林伟生 - 25 by 25 in 25</h1>
+        <h1 className="font-semibold text-2xl mb-2 tracking-tighter">
+          林伟生 - 25 by 25 in 25
+        </h1>
       </Link>
       <CountdownTimer />
       <div className=" prose prose-neutral dark:prose-invert ">
-       Progress: 0/25
-
-
-         <h3 >Mind</h3>
+        Progress: 0/25
+        <h3>Mind</h3>
         <ul>
           <li>1400+ Chess Elo</li>
           <li>Read/Reread 25 Books</li>
           <li>Indonesian Language Related TBD</li>
           <li>Chinese Language Related TBD</li>
           <li>Poker Related TBD</li>
-
-    
-          
-            
-    
-
-          
-          Expand Down
-    
-    
-  
         </ul>
-        <h3 >Body</h3>
+        <h3>Body</h3>
         <ul>
           <li>Sub 2 hour half marathon</li>
           <li>Sub 15% body fat</li>
