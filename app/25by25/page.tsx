@@ -11,17 +11,18 @@ export default function by25Page() {
   return (
     <section>
       <Link href="/">
-        <h1 className="font-semibold text-2xl mb-2 tracking-tighter">林伟生 - 25 by 25 in 25</h1>
+        <h1 className="font-semibold text-2xl mb-2 tracking-tighter">林伟生</h1>
       </Link>
       <CountdownTimer />
-      <div className=" prose prose-neutral dark:prose-invert ">
-       Progress: 0/25
-    
- 
+      <div className="prose prose-neutral dark:prose-invert">
+        Thesis: To avoid feelings of regret at 25 of me not working hard enough
+        or doing xyz, will complete all 25 of these goals creating both
+        short/long form videos for each.
+      
          <h3 >Mind</h3>
         <ul>
           <li>1400+ Chess Elo</li>
-          <li>Read/Reread 25 Books</li>
+          <li>Read/ReRead 25 Books</li>
           <li>Indonesian Language Related TBD</li>
           <li>Chinese Language Related TBD</li>
           <li>Poker Related TBD</li>
