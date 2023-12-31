@@ -1,14 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { differenceInMonths, differenceInDays, differenceInHours, differenceInMinutes, differenceInSeconds } from "date-fns";
+
+
 
 const CountdownTimer = () => {
-  const [timeLeft, setTimeLeft] = useState<{
-    months: number;
-    days: number;
-    hours: number;
-    minutes: number;
-    seconds: number;
-  }>({
+  const [timeLeft, setTimeLeft] = useState({
     months: 0,
     days: 0,
     hours: 0,
@@ -16,46 +13,37 @@ const CountdownTimer = () => {
     seconds: 0,
   });
 
-  const calculateTimeLeft = (): {
-    months: number;
-    days: number;
-    hours: number;
-    minutes: number;
-    seconds: number;
-  } => {
-    const difference = +new Date("2026-02-19") - +new Date();
-    let timeLeft: {
-      months: number;
-      days: number;
-      hours: number;
-      minutes: number;
-      seconds: number;
-    } = {
-      months: 0,
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
-    };
+  const calculateTimeLeft = () => {
+    const targetDate = new Date("2026-02-19");
+    const currentDate = new Date();
 
-    if (difference > 0) {
-      timeLeft = {
-        months: Math.floor(difference / (1000 * 60 * 60 * 24 * 30)),
-        days: Math.floor((difference / (1000 * 60 * 60 * 24)) % 30),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
+    if (currentDate >= targetDate) {
+      return { months: 0, days: 0, hours: 0, minutes: 0, seconds: 0 };
     }
 
-    return timeLeft;
+    let months = differenceInMonths(targetDate, currentDate);
+    let days = differenceInDays(targetDate, currentDate);
+    let hours = differenceInHours(targetDate, currentDate) % 24;
+    let minutes = differenceInMinutes(targetDate, currentDate) % 60;
+    let seconds = differenceInSeconds(targetDate, currentDate) % 60;
+
+    // Adjust days to be within the last month's frame
+    currentDate.setMonth(currentDate.getMonth() + months);
+    days = differenceInDays(targetDate, currentDate);
+
+    return { months, days, hours, minutes, seconds };
   };
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
-  });
+
+    return () => clearInterval(timer); // Clear interval on component unmount
+  }, []);
+
+
+
 
   return (
     <div>
