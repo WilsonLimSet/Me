@@ -266,9 +266,9 @@ export default function Page() {
           </li>
        
           <li>
-            Currently reading Foundation,{" "}
+            Currently reading Silence,{" "}
             <a
-              href="https://www.goodreads.com/review/list/93017514-wilson?shelf=most-impactful&view=covers"
+              href="https://www.goodreads.com/book/show/25663949-silence"
               target="_blank"
               rel="noopener noreferrer"
             >
