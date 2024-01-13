@@ -27,7 +27,7 @@ export default function by25Page() {
         <h3>Body</h3>
         <ul>
           <li>Sub 2 hour half marathon</li>
-          <li>Sub 15% body fat</li>
+          <li>Sub 14% body fat</li>
           <li>Finish Half Ironman</li>
           <li>Bench 225 lbs</li>
           <li>100 days of 85+ Sleep Score</li>
