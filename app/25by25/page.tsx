@@ -51,7 +51,7 @@ export default function by25Page() {
         <h3 id="computer-office">Side Quest</h3>
         <ul>
           <li>Pilots License </li>
-          <li>Learn to play 搁浅 and Stay on Piano</li>
+          <li>Learn to play 搁浅, 我的歌声里 and Stay on Piano</li>
           <li>TBD</li>
           <li>All 250 Letterboxd films watched</li>
           <li>10K+ Subs on Youtube</li>
