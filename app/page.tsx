@@ -171,7 +171,7 @@ export default function Page() {
                 name="Coffee Chat AI"
                 slug="https://www.coffeechatai.com/"
                 description="Podcast and coffee chat question generator."
-                stats="1K+ Coffee Chats Aided."
+                stats="1.3K+ Coffee Chats Aided."
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
@@ -180,7 +180,7 @@ export default function Page() {
                 name="Atomic Flow"
                 slug="https://chrome.google.com/webstore/detail/atomic-flow/gbeiphffnlkmgoclacceflphonplpigi"
                 description="Chrome extension to block distracting social media websites."
-                stats="40+ Weekly Users."
+                stats="50+ Weekly Users."
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
@@ -189,7 +189,7 @@ export default function Page() {
                 name="Youtube Title Views Updater"
                 slug="https://www.youtube.com/watch?v=PA2GKru3GT8"
                 description="Cron job to automatically update video title based on views."
-                stats="600+ Views."
+                stats="700+ Views."
               />
             </div>
           </Suspense>
@@ -213,7 +213,7 @@ export default function Page() {
             , wilsonlimsetiawan@gmail.com and my{" "}
             <a
               target="_blank"
-              href="https://drive.google.com/file/d/1Hp2b_oOYwa674r18THchnOGRMZOheAxa/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Ya9xE5orCc0vCrY6z2ce86xNVs--z5eu/view"
               className="text-gray-500 hover:text-gray-700"
             >
               resume
