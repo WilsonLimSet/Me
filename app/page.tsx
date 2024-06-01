@@ -112,8 +112,8 @@ export default function Page() {
     <section>
       <h1 className="font-semibold text-2xl mb-2 tracking-tighter">林伟生</h1>
       <div className="prose prose-neutral dark:prose-invert">
-        I'm Wilson Lim Setiawan, born/raised in Singapore, currently a senior
-        studying Computer Science at University of Southern California.
+        I'm Wilson Lim Setiawan, born/raised in Singapore, currently a fresh
+        Computer Science grad from University of Southern California.
         {` My experience includes SWE internships at  `}
         <span className="not-prose">
           <Badge href="https://www.gsam.com/content/gsam/global/en/homepage.html">
@@ -159,9 +159,9 @@ export default function Page() {
             <div className="w-full md:w-1/2 p-3">
               {" "}
               <BlogLink
-                name="Sleep Ranking"
-                slug="https://www.sleepranking.com/"
-                description="Competitive social accountability with sleep."
+                name="CEO Insights"
+                slug="https://ceoinsights.co/"
+                description="Effortless podcast discovery with AI generated blogs."
                 stats="Currently Building."
               />
             </div>
@@ -171,7 +171,7 @@ export default function Page() {
                 name="Coffee Chat AI"
                 slug="https://www.coffeechatai.com/"
                 description="Podcast and coffee chat question generator."
-                stats="1.3K+ Coffee Chats Aided."
+                stats="1.5K+ Coffee Chats Aided."
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
@@ -213,7 +213,7 @@ export default function Page() {
             , wilsonlimsetiawan@gmail.com and my{" "}
             <a
               target="_blank"
-              href="https://drive.google.com/file/d/1Ya9xE5orCc0vCrY6z2ce86xNVs--z5eu/view"
+              href="https://drive.google.com/file/d/1BYGIHHRRbfEPrlnIuPdvKgY3tDIdIznA/view?usp=sharing"
               className="text-gray-500 hover:text-gray-700"
             >
               resume
@@ -223,13 +223,9 @@ export default function Page() {
         </div>
         <h3 id="involved">Things I'm involved with and areas of interest:</h3>
         <ul>
-        <li>
-            Completing my {" "}
-            <a
-              href="/25by25"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <li>
+            Completing my{" "}
+            <a href="/25by25" target="_blank" rel="noopener noreferrer">
               25 by 25 in 25
             </a>
             .
@@ -264,11 +260,11 @@ export default function Page() {
             )}{" "}
             last night.
           </li>
-       
+
           <li>
             Currently reading Silence,{" "}
             <a
-               href="https://www.goodreads.com/review/list/93017514-wilson?shelf=most-impactful&view=covers"
+              href="https://www.goodreads.com/review/list/93017514-wilson?shelf=most-impactful&view=covers"
               target="_blank"
               rel="noopener noreferrer"
             >

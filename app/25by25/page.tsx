@@ -15,7 +15,7 @@ export default function by25Page() {
       </Link>
       <CountdownTimer />
       <div className=" prose prose-neutral dark:prose-invert ">
-        Progress: 0/25
+        Progress: 2/25
         <h3>Mind</h3>
         <ul>
           <li>1400+ Chess Elo</li>
@@ -37,12 +37,28 @@ export default function by25Page() {
           <li>100 days of Sub 3 Hour Phone Screen </li>
           <li>Religion/Mediation TBD </li>
           <li>5 Day+ Solo Trip</li>
-          <li>Full Send Guys Trip</li>
+          <li>
+            <span className="line-through">Guys Trip</span>
+            <span className="text-green-500 text-xl"> ✓</span>-
+            <a
+              target="_blank"
+              href="https://www.youtube.com/shorts/rUMpZQR4Wf4"
+              className="text-blue-500 ml-2"
+            >
+              Hiking Volcán de Fuego in Guatemala
+            </a>
+          </li>
           <li>Jay Chou or Gallant concert</li>
         </ul>
         <h3 id="computer-office">Main Quest</h3>
         <ul>
-          <li>Graduate College</li>
+          <li>
+            <span className="line-through">Graduate College</span>
+            <span className="text-green-500 text-xl"> ✓</span>-
+            <a className="text-blue-500 hover:underline ml-2">
+              Video coming soon
+            </a>
+          </li>
           <li>Full Time SWE Job</li>
           <li>1K MRR or 10K MAU Side Project </li>
           <li>Promoted or Raise Seed Round </li>
