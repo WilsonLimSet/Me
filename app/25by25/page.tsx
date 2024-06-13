@@ -68,8 +68,8 @@ export default function by25Page() {
         <ul>
           <li>Pilots License </li>
           <li>Learn to play 搁浅, 我的歌声里 and Stay on Piano</li>
-          <li>TBD</li>
-          <li>All 250 Letterboxd films watched</li>
+          <li>Cooking TBD</li>
+          <li>All 250 Letterboxd Top 250 Narrative Feature Films watched</li>
           <li>10K+ Subs on Youtube</li>
         </ul>
       </div>
