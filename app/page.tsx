@@ -213,7 +213,7 @@ export default function Page() {
             , wilsonlimsetiawan@gmail.com and my{" "}
             <a
               target="_blank"
-              href="https://drive.google.com/file/d/1BYGIHHRRbfEPrlnIuPdvKgY3tDIdIznA/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Bb2jrsR_m_wbHf8513OmboIBvLh5qv9d/view?usp=sharing"
               className="text-gray-500 hover:text-gray-700"
             >
               resume
