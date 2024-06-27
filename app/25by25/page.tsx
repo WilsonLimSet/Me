@@ -55,9 +55,12 @@ export default function by25Page() {
           <li>
             <span className="line-through">Graduate College</span>
             <span className="text-green-500 text-xl"> ✓</span>-
-            <a className="text-blue-500 hover:underline ml-2">
-              Video coming soon
-            </a>
+            <a
+              target="_blank"
+              href="https://www.youtube.com/watch?v=U6HXXCHYaZw"
+              className="text-blue-500 ml-2"
+            >
+               My degree in 8 mins
           </li>
           <li>Full Time SWE Job</li>
           <li>1K MRR or 10K MAU Side Project </li>
