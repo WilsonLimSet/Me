@@ -262,7 +262,7 @@ export default function Page() {
           </li>
 
           <li>
-            Currently reading Silence,{" "}
+            Currently reading Why We Sleep,{" "}
             <a
               href="https://www.goodreads.com/review/list/93017514-wilson?shelf=most-impactful&view=covers"
               target="_blank"
