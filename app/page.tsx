@@ -159,10 +159,10 @@ export default function Page() {
             <div className="w-full md:w-1/2 p-3">
               {" "}
               <BlogLink
-                name="CEO Insights"
-                slug="https://ceoinsights.co/"
+                name="Quick Pods"
+                slug="https://www.quickpods.co/"
                 description="Effortless podcast discovery with AI generated blogs."
-                stats="Currently Building."
+                stats="100+ Podcasts Summarised."
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
@@ -171,7 +171,7 @@ export default function Page() {
                 name="Coffee Chat AI"
                 slug="https://www.coffeechatai.com/"
                 description="Podcast and coffee chat question generator."
-                stats="1.5K+ Coffee Chats Aided."
+                stats="1.6K+ Coffee Chats Aided."
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
@@ -189,7 +189,7 @@ export default function Page() {
                 name="Youtube Title Views Updater"
                 slug="https://www.youtube.com/watch?v=PA2GKru3GT8"
                 description="Cron job to automatically update video title based on views."
-                stats="700+ Views."
+                stats="800+ Views."
               />
             </div>
           </Suspense>
