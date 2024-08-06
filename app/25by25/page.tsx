@@ -15,7 +15,7 @@ export default function by25Page() {
       </Link>
       <CountdownTimer />
       <div className=" prose prose-neutral dark:prose-invert ">
-        Progress: 2/25
+        Progress: 3/25
         <h3>Mind</h3>
         <ul>
           <li>1400+ Chess Elo</li>
