@@ -48,7 +48,17 @@ export default function by25Page() {
               Hiking Volcán de Fuego in Guatemala
             </a>
           </li>
-          <li>Jay Chou or Gallant concert</li>
+          <li>
+            <span className="line-through">Gallant Concert</span>
+            <span className="text-green-500 text-xl"> ✓</span>-
+            <a
+              target="_blank"
+              href="https://www.youtube.com/shorts/AoTg9zAI7hg"
+              className="text-blue-500 ml-2"
+            >
+              100 Person Show in LA
+            </a>
+          </li>
         </ul>
         <h3 id="computer-office">Main Quest</h3>
         <ul>
