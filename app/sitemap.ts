@@ -1,5 +1,6 @@
 import { promises as fs } from 'fs';
 import path from 'path';
+import { MetadataRoute } from 'next';
 
 async function getNoteSlugs(dir: string) {
   const entries = await fs.readdir(dir, {
@@ -18,17 +19,19 @@ async function getNoteSlugs(dir: string) {
     .map((slug) => slug.replace(/\\/g, '/'));
 }
 
-export default async function sitemap() {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const notesDirectory = path.join(process.cwd(), 'app');
   const slugs = await getNoteSlugs(notesDirectory);
 
+  // Use relative URLs for notes
   const notes = slugs.map((slug) => ({
-    url: `https://wilsonlimsetiawan.com/${slug}`,
+    url: `/${slug}`,
     lastModified: new Date().toISOString(),
   }));
 
-  const routes = ['', '/work'].map((route) => ({
-    url: `https://wilsonlimsetiawan.com${route}`,
+  // Use relative URLs for routes
+  const routes = ['', '/favlinks', '/25by25'].map((route) => ({
+    url: route,
     lastModified: new Date().toISOString(),
   }));
 

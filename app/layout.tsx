@@ -7,10 +7,6 @@ import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://wilsonlimsetiawan.com'),
-  alternates: {
-    canonical: '/',
-  },
   title: {
     default: 'Wilson Lim Setiawan',
     template: '%s | Wilson Lim Setiawan',
