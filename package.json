@@ -4,7 +4,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "delete": "rm -rf app/n"
+    "delete": "rm -rf app/n",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@next/mdx": "15.0.3",
