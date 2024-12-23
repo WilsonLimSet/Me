@@ -6,6 +6,12 @@ interface SleepData {
   actualSleepTime: number;
 }
 
+interface ErrorResponse {
+  error: string;
+  details: string;
+  authUrl?: string;
+}
+
 function formatSleepTime(milliseconds: number): string {
   const totalMinutes = Math.floor(milliseconds / (1000 * 60));
   const hours = Math.floor(totalMinutes / 60);
@@ -16,7 +22,7 @@ function formatSleepTime(milliseconds: number): string {
 export function Whoop() {
   const [sleepTime, setSleepTime] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<ErrorResponse | null>(null);
 
   useEffect(() => {
     async function fetchSleepData() {
@@ -32,9 +38,11 @@ export function Whoop() {
         setError(null);
       } catch (err) {
         console.error(err);
-        setError(
-          err instanceof Error ? err.message : 'Failed to fetch sleep data'
-        );
+        const errorData =
+          err instanceof Error
+            ? { error: err.message, details: '' }
+            : { error: 'Failed to fetch sleep data', details: '' };
+        setError(errorData as ErrorResponse);
       } finally {
         setLoading(false);
       }
@@ -44,12 +52,20 @@ export function Whoop() {
   }, []);
 
   if (loading) return <span className="text-gray-400">Loading...</span>;
-  if (error)
+  if (error) {
+    if (error.authUrl) {
+      return (
+        <a href={error.authUrl} className="text-blue-500 hover:underline">
+          Connect Whoop
+        </a>
+      );
+    }
     return (
-      <span className="text-gray-400" title={error}>
+      <span className="text-gray-400" title={error.details || error.error}>
         Error loading sleep data
       </span>
     );
+  }
   if (!sleepTime) return null;
 
   return (

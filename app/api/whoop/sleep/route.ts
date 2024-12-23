@@ -58,6 +58,19 @@ export async function GET() {
     return NextResponse.json({ actualSleepTime });
   } catch (error) {
     console.error('Whoop API Error:', error);
+
+    // Check if it's an authentication error
+    if (error instanceof Error && error.message.includes('No tokens found')) {
+      return NextResponse.json(
+        {
+          error: 'Authentication required',
+          details: 'Please authenticate with Whoop first',
+          authUrl: '/api/whoop/auth',
+        },
+        { status: 401 }
+      );
+    }
+
     return NextResponse.json(
       { error: 'Failed to fetch sleep data' },
       { status: 500 }
