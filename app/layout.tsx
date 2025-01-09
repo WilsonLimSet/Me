@@ -2,8 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ViewTransitions } from 'next-view-transitions';
-import { Analytics } from '@vercel/analytics/react';
-
+import { SpeedInsights } from '@vercel/speed-insights/next';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -27,8 +26,8 @@ export default function RootLayout({
             <main className="max-w-[60ch] mx-auto w-full space-y-6">
               {children}
             </main>
-            {/* <Footer /> */}
-            <Analytics />
+            <Footer />
+            <SpeedInsights />
           </div>
         </body>
       </html>
@@ -36,29 +35,29 @@ export default function RootLayout({
   );
 }
 
-// function Footer() {
-//   const links = [
-//     { name: '@leerob', url: 'https://x.com/leeerob' },
-//     { name: 'youtube', url: 'https://www.youtube.com/@leerob' },
-//     { name: 'linkedin', url: 'https://www.linkedin.com/in/leeerob' },
-//     { name: 'github', url: 'https://github.com/leerob' },
-//   ];
+function Footer() {
+  const links = [
+    { name: 'twitter', url: 'https://x.com/WilsonLimSet' },
+    { name: 'youtube', url: 'https://www.youtube.com/@wilsonlimset' },
+    { name: 'linkedin', url: 'https://www.linkedin.com/in/wilsonlimsetiawan/' },
+    { name: 'github', url: 'https://github.com/WilsonLimSet' },
+  ];
 
-//   return (
-//     <footer className="mt-12 text-center">
-//       <div className="flex justify-center space-x-4 tracking-tight">
-//         {links.map((link) => (
-//           <a
-//             key={link.name}
-//             href={link.url}
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
-//           >
-//             {link.name}
-//           </a>
-//         ))}
-//       </div>
-//     </footer>
-//   );
-// }
+  return (
+    <footer className="mt-12 text-center">
+      <div className="flex justify-center space-x-4 tracking-tight">
+        {links.map((link) => (
+          <a
+            key={link.name}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
+          >
+            {link.name}
+          </a>
+        ))}
+      </div>
+    </footer>
+  );
+}
