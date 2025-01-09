@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ViewTransitions } from 'next-view-transitions';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     default: 'Wilson Lim Setiawan',
     template: '%s | Wilson Lim Setiawan',
   },
-  description: '',
+  description: 'Building and sharing',
 };
 
 export default function RootLayout({
@@ -20,14 +21,15 @@ export default function RootLayout({
 }>) {
   return (
     <ViewTransitions>
-      <html lang="en" className={`${inter.className}`}>
-        <body className="antialiased tracking-tight">
-          <div className="min-h-screen flex flex-col justify-between pt-0 md:pt-8 p-8 bg-white text-gray-900">
-            <main className="max-w-[60ch] mx-auto w-full space-y-6">
+      <html lang="en" className={`${inter.className} h-full`}>
+        <body className="antialiased tracking-tight h-full">
+          <div className="min-h-full flex flex-col p-8 bg-white text-gray-900">
+            <main className="flex-1 max-w-[60ch] mx-auto w-full space-y-6 pt-0 md:pt-8">
               {children}
             </main>
             <Footer />
             <SpeedInsights />
+            <Analytics />
           </div>
         </body>
       </html>
@@ -44,7 +46,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="mt-12 text-center">
+    <footer className="mt-auto pt-8 text-center">
       <div className="flex justify-center space-x-4 tracking-tight">
         {links.map((link) => (
           <a
