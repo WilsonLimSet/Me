@@ -11,33 +11,40 @@ type BlockquoteProps = ComponentPropsWithoutRef<'blockquote'>;
 
 const components = {
   h1: (props: HeadingProps) => (
-    <h1 className="font-medium pt-12 mb-0 fade-in" {...props} />
+    <h1
+      className="text-xl font-bold text-neutral-100 pt-12 mb-0 fade-in"
+      {...props}
+    />
   ),
   h2: (props: HeadingProps) => (
-    <h2 className="text-gray-800 font-medium mt-8 mb-3" {...props} />
+    <h2 className="text-neutral-100 font-medium mt-8 mb-3" {...props} />
   ),
   h3: (props: HeadingProps) => (
-    <h3 className="text-gray-800 font-medium mt-8 mb-3" {...props} />
+    <h3 className="text-neutral-100 font-medium mt-8 mb-3" {...props} />
   ),
-  h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
+  h4: (props: HeadingProps) => (
+    <h4 className="font-medium text-neutral-200" {...props} />
+  ),
   p: (props: ParagraphProps) => (
-    <p className="text-gray-800 leading-snug" {...props} />
+    <p className="text-neutral-300 leading-snug" {...props} />
   ),
   ol: (props: ListProps) => (
-    <ol className="text-gray-800 list-decimal pl-5 space-y-2" {...props} />
+    <ol className="text-neutral-300 list-decimal pl-5 space-y-2" {...props} />
   ),
   ul: (props: ListProps) => (
-    <ul className="text-gray-800 list-disc pl-5 space-y-1" {...props} />
+    <ul className="text-neutral-300 list-disc pl-5 space-y-1" {...props} />
   ),
-  li: (props: ListItemProps) => <li className="pl-1" {...props} />,
+  li: (props: ListItemProps) => (
+    <li className="pl-1 text-neutral-300" {...props} />
+  ),
   em: (props: ComponentPropsWithoutRef<'em'>) => (
-    <em className="font-medium" {...props} />
+    <em className="font-medium text-neutral-200" {...props} />
   ),
   strong: (props: ComponentPropsWithoutRef<'strong'>) => (
-    <strong className="font-medium" {...props} />
+    <strong className="font-medium text-neutral-200" {...props} />
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
-    const className = 'text-blue-500 hover:text-blue-700';
+    const className = 'text-sky-400 hover:text-sky-300';
     if (href?.startsWith('/')) {
       return (
         <Link href={href} className={className} {...props}>
@@ -90,7 +97,7 @@ const components = {
   ),
   blockquote: (props: BlockquoteProps) => (
     <blockquote
-      className="ml-[0.075em] border-l-3 border-gray-300 pl-4 text-gray-700"
+      className="ml-[0.075em] border-l-3 border-neutral-600 pl-4 text-neutral-400"
       {...props}
     />
   ),
