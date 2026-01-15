@@ -30,7 +30,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // Use relative URLs for routes
-  const routes = ['', '/favlinks', '/25by25'].map((route) => ({
+  const routes = ['', '/favlinks'].map((route) => ({
     url: route,
     lastModified: new Date().toISOString(),
   }));

@@ -1,14 +1,14 @@
 @import 'tailwindcss';
 
 :root {
-  --sh-class: #7aa2f7;
-  --sh-sign: #89ddff;
-  --sh-string: #9ece6a;
-  --sh-keyword: #bb9af7;
-  --sh-comment: #565f89;
-  --sh-jsxliterals: #7aa2f7;
-  --sh-property: #73daca;
-  --sh-entity: #e0af68;
+  --sh-class: #0550ae;
+  --sh-sign: #24292f;
+  --sh-string: #0a3069;
+  --sh-keyword: #cf222e;
+  --sh-comment: #6e7781;
+  --sh-jsxliterals: #0550ae;
+  --sh-property: #116329;
+  --sh-entity: #953800;
 }
 
 html {
@@ -28,7 +28,8 @@ h4 {
 }
 
 pre {
-  background-color: #16161e;
+  background-color: #f6f8fa;
+  border: 1px solid #d1d5db;
   border-radius: 0.5rem;
   overflow-x: auto;
   padding: 1rem;
@@ -50,7 +51,7 @@ code {
   font-size: 14px;
   padding: 0.2em 0.4em;
   border-radius: 0.3em;
-  background-color: var(--color-gray-100);
+  background-color: #f3f4f6;
 }
 
 pre code {
@@ -62,12 +63,12 @@ pre code {
 }
 
 pre code > span .sh__token--identifier {
-  color: white !important;
+  color: #24292f !important;
 }
 
 code:not(pre code) span {
   font-weight: 500;
-  color: black !important;
+  color: #24292f !important;
 }
 
 pre code span {
@@ -75,7 +76,7 @@ pre code span {
 }
 
 hr {
-  color: var(--color-gray-200);
+  border-color: #e5e7eb;
 }
 
 /* Remove Safari input shadow on mobile */
@@ -93,93 +94,35 @@ table {
   white-space: nowrap;
 }
 
-.transition-element {
-  view-transition-name: lee;
-}
-
-::view-transition-old(name),
-::view-transition-new(name) {
-  animation: none;
-  mix-blend-mode: normal;
-}
-
-::view-transition-old(name) {
-  opacity: 1;
-  animation: fade-out 0.2s ease-in-out forwards;
-}
-
-::view-transition-new(name) {
-  opacity: 0;
-  animation: fade-in 0.3s ease-in-out 0.1s forwards;
-}
-
-@keyframes fade-out {
-  0% {
-    transform: translateY(0) translateX(-0.2px);
-    opacity: 1;
-    font-weight: 500;
-  }
-
-  20% {
-    transform: translateY(24px) translateX(-0.2px);
-    opacity: 0.5;
-  }
-
-  40% {
-    transform: translateY(24px) translateX(-0.2px);
-    opacity: 0.3;
-  }
-
-  60% {
-    transform: translateY(24px) translateX(-0.2px);
-    opacity: 0.2;
-  }
-
-  100% {
-    transform: translateY(24px) translateX(-0.2px);
-    opacity: 0;
-  }
-}
-
-@keyframes fade-in {
+@keyframes fade-in-up {
   from {
     opacity: 0;
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes fade-in-up {
-  0% {
-    transform: translateY(24px) translateX(-0.2px);
-    opacity: 0;
-  }
-
-  20% {
-    transform: translateY(24px) translateX(-0.2px);
-    opacity: 0.5;
-  }
-
-  80% {
-    transform: translateY(0) translateX(-0.2px);
-    opacity: 0.7;
-  }
-
-  100% {
-    transform: translateY(0) translateX(-0.2px);
-    opacity: 1;
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.5s ease-out forwards;
+.stagger-children > * {
   opacity: 0;
+  animation: fade-in-up 0.4s ease-out forwards;
 }
 
-@supports (view-transition-name: none) {
-  .animate-fade-in {
-    animation: fade-in 0.5s ease-out forwards;
-    opacity: 0;
-  }
+.stagger-children > *:nth-child(1) { animation-delay: 0s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.05s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.15s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.25s; }
+.stagger-children > *:nth-child(7) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(8) { animation-delay: 0.35s; }
+.stagger-children > *:nth-child(9) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(10) { animation-delay: 0.45s; }
+.stagger-children > *:nth-child(n+11) { animation-delay: 0.5s; }
+
+@keyframes soundbar {
+  0% { height: 2px; }
+  100% { height: 10px; }
 }

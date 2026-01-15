@@ -1,5 +1,5 @@
 import React, { ComponentPropsWithoutRef } from 'react';
-import { Link } from 'next-view-transitions';
+import Link from 'next/link';
 import { highlight } from 'sugar-high';
 
 type HeadingProps = ComponentPropsWithoutRef<'h1'>;
@@ -12,39 +12,40 @@ type BlockquoteProps = ComponentPropsWithoutRef<'blockquote'>;
 const components = {
   h1: (props: HeadingProps) => (
     <h1
-      className="text-xl font-bold text-neutral-100 pt-12 mb-0 fade-in"
+      className="text-2xl font-semibold text-neutral-900 mb-6"
       {...props}
     />
   ),
   h2: (props: HeadingProps) => (
-    <h2 className="text-neutral-100 font-medium mt-8 mb-3" {...props} />
+    <h2 className="text-neutral-900 font-medium mt-8 mb-3" {...props} />
   ),
   h3: (props: HeadingProps) => (
-    <h3 className="text-neutral-100 font-medium mt-8 mb-3" {...props} />
+    <h3 className="text-neutral-900 font-medium mt-8 mb-3" {...props} />
   ),
   h4: (props: HeadingProps) => (
-    <h4 className="font-medium text-neutral-200" {...props} />
+    <h4 className="font-medium text-neutral-800" {...props} />
   ),
   p: (props: ParagraphProps) => (
-    <p className="text-neutral-300 leading-snug" {...props} />
+    <p className="text-neutral-600 leading-relaxed" {...props} />
   ),
   ol: (props: ListProps) => (
-    <ol className="text-neutral-300 list-decimal pl-5 space-y-2" {...props} />
+    <ol className="text-neutral-600 list-decimal pl-5 space-y-2" {...props} />
   ),
   ul: (props: ListProps) => (
-    <ul className="text-neutral-300 list-disc pl-5 space-y-1" {...props} />
+    <ul className="text-neutral-600 list-disc pl-5 space-y-1" {...props} />
   ),
   li: (props: ListItemProps) => (
-    <li className="pl-1 text-neutral-300" {...props} />
+    <li className="pl-1 text-neutral-600" {...props} />
   ),
   em: (props: ComponentPropsWithoutRef<'em'>) => (
-    <em className="font-medium text-neutral-200" {...props} />
+    <em className="font-medium text-neutral-700" {...props} />
   ),
   strong: (props: ComponentPropsWithoutRef<'strong'>) => (
-    <strong className="font-medium text-neutral-200" {...props} />
+    <strong className="font-medium text-neutral-800" {...props} />
   ),
   a: ({ href, children, ...props }: AnchorProps) => {
-    const className = 'text-sky-400 hover:text-sky-300';
+    const className =
+      'text-neutral-900 underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-900 transition-all duration-[220ms] ease-out hover:-translate-y-px';
     if (href?.startsWith('/')) {
       return (
         <Link href={href} className={className} {...props}>
@@ -97,7 +98,7 @@ const components = {
   ),
   blockquote: (props: BlockquoteProps) => (
     <blockquote
-      className="ml-[0.075em] border-l-3 border-neutral-600 pl-4 text-neutral-400"
+      className="ml-[0.075em] border-l-3 border-neutral-300 pl-4 text-neutral-500 italic"
       {...props}
     />
   ),
